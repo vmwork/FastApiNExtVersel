@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "fastapi-dev": "pip3 install -r requirements.txt && python3 -m uvicorn api.index:app --reload",
-    "build": "next build --turbopack",
+    "fastapi-dev": "pip install -r requirements.txt && uvicorn api.main:app --reload",
+    "build": "next build --turbopack && pip install -r requirements.txt && uvicorn api.main:app --reload",
     "start": "next start",
     "lint": "eslint"
   },
