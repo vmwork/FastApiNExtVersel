@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function MyNextFastAPIApp() {
   const getRole = async () => {
-    let baseUrl = 'https://py-test-docs.vercel.app/';
+    let baseUrl = 'https://py-test-docs.vercel.app';
     if (process.env.NODE_ENV === 'development') {
       baseUrl = 'http://localhost:3000';
     }
