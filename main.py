@@ -1,4 +1,4 @@
-from fastapi import  FastAPI
+from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from dataBase import create_tables, delete_tables
 from router import router as tasks_router
