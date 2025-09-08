@@ -23,7 +23,12 @@ export default function MyNextFastAPIApp() {
       return null;
     }
   };
-  const [role, setRole] = useState({});
+  interface IRole {
+    title: string;
+    mainskill: string;
+  }
+
+  const [role, setRole] = useState<IRole>();
   return (
     <>
       <button
@@ -32,7 +37,9 @@ export default function MyNextFastAPIApp() {
       >
         Get role
       </button>
-      <div>{`The main skill of a ${role?.title} is ${role?.mainskill}.`}</div>
+      {role && (
+        <div>{`The main skill of a ${role.title} is ${role.mainskill}.`}</div>
+      )}
     </>
   );
 }
